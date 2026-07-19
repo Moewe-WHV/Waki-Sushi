@@ -1,0 +1,2 @@
+class Snackautomat: 
+    pass
