@@ -4,9 +4,9 @@ Lermprojekt - FIAE Umschulung  - Snackautomat
 ---
 
 ### Angaben
-| Erstellt | Bearbeitet | Start | Ende | SOLL Zeit | IST Zeit | Geschätzte Zeit |
-|----------|------------|-------|------|-----------|----------|-----------------|
-| Gruppe 2 | Gruppe 3   | 20.07 | 23.07| 8 Stunden |          |                 |
+| Erstellt | Bearbeitet | Start | Abgabe | SOLL Zeit | IST Zeit | Geschätzte Zeit |
+|----------|------------|-------|--------|-----------|----------|-----------------|
+| Gruppe 2 | Gruppe 3   | 20.07 |  23.07 | 8 Stunden |          |                 |
 
 ---
 
@@ -32,8 +32,8 @@ WAKI-SUSHI/
 │  ├── aufgabenstellung.md
 │  ├── dokumentation.md
 │  └── diagramme/
-│       ├── Klassendiagramm.md
-│       └── Sequenzdiagramm.md
+│       ├── (korrektur)Klassendiagramm.md
+│       └── (korrektur)Sequenzdiagramm.md
 └── snackautomat/
 │   ├── main.py                     # Programmstart, Interaktionsschleife
 │   ├── models/
@@ -52,3 +52,10 @@ WAKI-SUSHI/
 ```  
 
 ---
+
+### Milestones
+```plantuml
+MS0 --> MS1 : Programmierung snackautomat/ + models/    (parallel, je 3h)
+MS1 --> MS2 : zusammenfügen in main                     (1h)
+MS2 --> MS3 : Test & Doku                               (1h)
+```

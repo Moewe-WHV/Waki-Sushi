@@ -1,2 +1,0 @@
-class Produkte: 
-    pass
