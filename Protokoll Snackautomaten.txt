@@ -21,5 +21,17 @@ ENDE von Tag 1.
 20.07.2026
 Tag 2
 
+Die Besprechung des Vorganges wurde erfolgreich gestartet.
+Dabei sind neue Fragen aufgetaucht, welche von der anderen Gruppe grob beantwortet wurden.
+Es wurden Fehler eingesehen sowie unzureichende Beschreibungen.
+Es wurden von der anderen Gruppe Verbesserungen übergeben.
+Es wurde begonnen, die ersten Klassen zu erstellen.
+Maximaler Schwerpunkt war das Grundgerüst (Klasse: Snackautomat)
+Mehrere Fehler wurden entdeckt und Fragen entstanden bei der Programmierung der Klasse "Snackautomat".
 
+ENDE von Tag 2.
+
+
+21.07.2026
+Tag 3
 
