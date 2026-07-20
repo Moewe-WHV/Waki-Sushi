@@ -31,6 +31,8 @@ class Snackautomat:
     def wechselgeldbestand_aktualisieren(self):
         pass
 
+Schnutzbart
+
 
 
 
