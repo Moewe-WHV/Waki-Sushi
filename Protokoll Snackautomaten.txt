@@ -1,0 +1,25 @@
+Protokoll von Projekt 
+"Japanische Snackautomaten"
+
+
+
+
+17.07.2026
+Tag 1
+
+Das Projekt wurde uns als Team übergeben. 
+Das Projekt enthält Aufgabenstellung mit Beschreibung, Klassendiagramm und Sequenzdiagramm.
+Es wurde sich ein genauer Überblick verschafft und gemeinsam analysiert.
+Einige Fragen sind entstanden (zB. Verbindung zwischen den Automaten und wie wird der Servicemitarbeiter vom Uni-Netzwerk kontaktiert),
+welche nicht in der Aufgabenstellung und in den Diagrammen klar zu erkennen waren.
+Diese Fragen mussten mit der Gruppe, welche dieses Projekt geplant haben, besprochen werden.
+Die Antworten dazu wurden besprochen und eine Mindmap wurde erstmal erstellt.
+
+ENDE von Tag 1.
+
+
+20.07.2026
+Tag 2
+
+
+
