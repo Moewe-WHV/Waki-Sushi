@@ -1,5 +1,5 @@
 class Snackautomat: 
-        def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
+    def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
         self.bestand = {"Wasabinuesse" : 20, "Algenchips" : 20, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 20}
         self.wechselgeldbestand = wechselgeldbestand
@@ -30,8 +30,6 @@ class Snackautomat:
         pass
     def wechselgeldbestand_aktualisieren(self):
         pass
-
-Schnutzbart
 
 
 
