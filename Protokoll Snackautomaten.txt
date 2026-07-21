@@ -35,3 +35,18 @@ ENDE von Tag 2.
 21.07.2026
 Tag 3
 
+Nach der ersten Unterrichtseinheit des Tages wurden die noch offenen Fragen besprochen.
+Dabei ist aufgefallen, dass in dem aktualisierten Klassendiagramm unklare und nicht kommunizierte Änderungen vorgenommen worden sind.
+Da die offenen Fragen bis zum Mittag nicht beantwortet werden konnten, wurde die Programmierung der Klassen eingestellt und es wurde währendessen begonnen an der Main zu arbeiten.
+Da vorgegeben wurde, es nach den Stakeholdern bzw nach den Vorgaben und Dokumenten zu machen, welche uns zur Verfügung gestellt wurden, sind uns des Öfteren die Hände gebunden gewesen.
+Es gab ein Meeting mit den Stakeholdern "Gruppe 2" und weitere Fragen wurden gestellt, aber nicht alle, da ein Schlussstrich in den Augen der Stakeholder gezogen werden sollte.
+Dementsprechend, wird alles weitere entweder improvisiert oder weggelassen.
+
+Ende von Tag 3.
+
+
+22.07.2026
+Tag 4
+
+
+
