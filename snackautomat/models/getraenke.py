@@ -7,7 +7,7 @@ class Getraenke:
         """Getränk mit Verpackung und Menge.
 
         Args:
-            verpackung (str): Bezeichnung der Verpackung oder des Getränks.
+            verpackung (str): Bezeichnung das Material der Verpackung.
             menge_liter (int|float): Menge des Getränks in Litern oder Millilitern.
             preis (int|float): Preis des Produkts in Euro
         """
@@ -63,15 +63,10 @@ class Tee(Getraenke):
         self.kalt = kalt
 
 
-wasser_mit_Kohlensäure = Wasser(menge_liter=250, verpackung="Wasser", kohlensaeure=True, preis=1.00)
-wasser_ohne_Kohlensäure = Wasser(menge_liter=250, verpackung="Stilles Wasser", kohlensaeure=False, preis=1.00)
+wasser_mit_Kohlensäure = Wasser(menge_liter=250, verpackung="PET Flasche", kohlensaeure=True, preis=1.00)
+wasser_ohne_Kohlensäure = Wasser(menge_liter=250, verpackung="PET Flasche", kohlensaeure=False, preis=1.00)
 
-cola = Cola(menge_liter=330, verpackung="Cola", sorte="Cola", preis=1.50)
-cola_light = Cola(menge_liter=330, verpackung="Cola Light", sorte="Light", preis=1.50)
-cola_zero = Cola(menge_liter=330, verpackung="Cola Zero", sorte="Zero", preis=1.50)
+cola = Cola(menge_liter=330, verpackung="PET Flasche", sorte="Cola", preis=1.50)
 
-schwarz_tee_heiß = Tee(menge_liter=25, verpackung="Heißer schwarzer Tee", kalt=False, sorte="schwarz", preis=1.50)
-schwarz_tee_kalt = Tee(menge_liter=25, verpackung="Kalter Schwarzer Tee", kalt=True, sorte="schwarz", preis=1.50)
-
-gruen_tee_heiß = Tee(menge_liter=250, verpackung="Heißer grüner Tee", kalt=False, sorte="gruen", preis=1.50)
-gruen_tee_kalt = Tee(menge_liter=250, verpackung="Kalter grüner Tee", kalt=True, sorte="gruen", preis=1.50)
+grüner_tee_heiß = Tee(menge_liter=25, verpackung="Glasflasche", kalt=False, sorte="Grüner Tee", preis=1.50)
+grüner_tee_kalt = Tee(menge_liter=25, verpackung="Glasflasche", kalt=True, sorte="Grüner Tee", preis=1.50)

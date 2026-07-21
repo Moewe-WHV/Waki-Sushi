@@ -7,7 +7,7 @@ class Essen:
         """Initialisiert ein Lebensmittel mit Verpackung und Gewicht.
 
         Args:
-            verpackung (str): Bezeichnung der Verpackung oder des Produkts.
+            verpackung (str): Bezeichnung das Art der Verpackung.
             menge_gramm (int|float): Gewicht des Produkts in Gramm.
             preis (int|float): Preis des Produkts in Euro
         """
@@ -27,6 +27,6 @@ class Mars(Essen):
     """Mars-Riegel als Snack."""
     pass
 
-wasabinuesse = Wasabinuesse(menge_gramm=50, verpackung="Wasabinuesse", preis=1.50 )
-algenchips = Algenchips(menge_gramm=30, verpackung="Algenchips", preis=1.80)
-mars = Mars(menge_gramm=45, verpackung="Mars", preis=1.20)
+wasabinuesse = Wasabinuesse(menge_gramm=50, verpackung="Papiertüte", preis=1.50 )
+algenchips = Algenchips(menge_gramm=30, verpackung="Pappdose", preis=1.80)
+mars = Mars(menge_gramm=45, verpackung="Plastikfolie", preis=1.20)
