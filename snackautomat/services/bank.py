@@ -6,30 +6,19 @@ class Bank:
     Attributes:
         kontostand_kunde (int|float): Aktueller Kontostand des Kunden.
         karte_gueltigkeit (bool): Ob die Karte gültig ist.
-        pin (int): Bei der Bank hinterlegte, korrekte PIN.
     """
 
-    def __init__(self, kontostand_kunde, karte_gueltigkeit, pin):
-        """Initialisiert die Bank mit Kontostand, Kartenvalidität und PIN.
+    def __init__(self, kontostand_kunde, karte_gueltigkeit):
+        """Initialisiert die Bank mit Kontostand und Kartenvalidität.
 
         Args:
             kontostand_kunde (int|float): Verfügbarer Kontostand des Kunden.
             karte_gueltigkeit (bool): True, wenn die Karte gültig ist.
-            pin (int): Die bei der Bank hinterlegte, korrekte PIN.
         """
         self.kontostand_kunde = kontostand_kunde
         self.karte_gueltigkeit = karte_gueltigkeit
-        self.pin = pin
 
-    def Kontostand_aktualisieren(self, betrag):
-        """Zieht einen Betrag vom Kundenkonto ab.
-
-        Args:
-            betrag (int|float): Betrag, der abgebucht werden soll.
-        """
-        self.kontostand_kunde = self.kontostand_kunde - betrag
-
-    def Kontostand_pruefen(self, betrag):
+    def kontostand_pruefen(self, betrag):
         """Prüft, ob der Kunde genügend Guthaben für die Zahlung hat.
 
         Args:
@@ -43,16 +32,28 @@ class Bank:
         else:
             return False
 
-    def PIN_pruefen(self, pin_eingabe):
-        """Prüft die eingegebene PIN gegen die hinterlegte Bank-PIN.x   
+    def kontostand_aktualisieren(self, betrag):
+        """Zieht einen Betrag vom Kundenkonto ab.
 
         Args:
-            pin_eingabe (int): Eingabe der Kunden-PIN.
+            betrag (int|float): Betrag, der abgebucht werden soll.
+        """
+        self.kontostand_kunde = self.kontostand_kunde - betrag
+
+    def zahlung_autorisieren(self, betrag):
+        """Prüft, ob eine Kartenzahlung durchgeführt werden darf.
+
+        Die Karte muss gültig sein und der Kontostand muss ausreichen.
+
+        Args:
+            betrag (int|float): Betrag, der abgebucht werden soll.
 
         Returns:
-            bool: True, wenn die PIN korrekt ist.
+            bool: True, wenn die Zahlung autorisiert wird.
         """
-        if pin_eingabe == self.pin:
+        if not self.karte_gueltigkeit:
+            return False
+        if self.kontostand_pruefen(betrag):
             return True
         else:
             return False
