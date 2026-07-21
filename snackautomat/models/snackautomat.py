@@ -1,4 +1,4 @@
-class Snackautomat: 
+class Snackautomat:
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
         self.bestand = {"Wasabinuesse" : 15, "Algenchips" : 15, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 15}
@@ -9,31 +9,31 @@ class Snackautomat:
     def bestand_anzeigen(self):
         for key, value in self.bestand.items():
             print(f"{key} : {value}")
-
+ 
     def wechselgeldbestand_anzeigen(self):
         wechselgeldbestand = self.wechselgeldbestand
         print(f"{wechselgeldbestand} EUR")
-
+ 
     def karte_einlesen(self):
         print("Karte wird eingelesen...")
-
+ 
     def karte_pruefen(self):
         # Überprüfung von Kontostand > Rechnung oder ist Karte eine Bankkarte ??? // entscheiden uns für Prüfung ob Bankkarte
         print("Karte wird geprüft...")
-
+ 
     def karte_ausgeben(self):
         print("Karte wird ausgegeben...")
-
+ 
     def zahlung_abwickeln(self):
         #Geld wird von Konto irgendwo hin transferiert bei Kartenzahlung
         pass
-
+ 
     def bargeld_annehmen(self):
         annahme_bar = float(input("Wieviel Bargeld wird eingezahlt? ")) # float wäre besser statt int // entscheiden uns für float
 
     def bargerld_ausgeben(self):
         ausgabe_bar = annahme_bar - rechnung # rechnung kommt von...
-
+ 
     def produkt_ausgeben(self, auswahl_produkt):                                                             # Kann man produkt_ausgeben und bestand_aktualisieren zusammenfügen?
         if auswahl_produkt == "1" and self.bestand["Cola"] == 0:
             print("Cola ist derzeit ausverkauft!")
@@ -49,7 +49,7 @@ class Snackautomat:
             print("Algenchips sind derzeit ausverkauft!")
         else:
             print("Das gewählte Produkt wird ausgegeben!")
-
+ 
     def bestand_aktualisieren(self, auswahl_produkt):
         if auswahl_produkt == "1":
             self.bestand["Cola"] = self.bestand["Cola"] - 1
@@ -63,21 +63,21 @@ class Snackautomat:
             self.bestand["Wasabinuesse"] = self.bestand["Wasabinuesse"] - 1
         elif auswahl_produkt == "4":
             self.bestand["Algenchips"] = self.bestand["Algenchips"] - 1
-
+ 
     def wechselgeldbestand_aktualisieren(self):
         pass
-
 
 
 #snackautomat1 = Snackautomat("Nummer 1")
 #snackautomat1.bestand_anzeigen()
 #self.bestand["Cola"]
-
-
-#Fragen: 
+ 
+ 
+#Fragen:
 # 1.Werden Bareinnahmen in Wechselgeld umgewandelt oder wird das seperat gespeichert im Automaten?  
 # 2.Wohin wird das Geld der Karte überwiesen? kein Firmenkonto verzeichnet
 # 3.Ist bei karte_pruefen im Snackautomaten der Kontostand gemeint oder ob die Karte eine Bankkarte ist?
 # 4.Warum gibt es bei Geld keinen float statt einem int?
 # 5.Warum gibt es kein Menü für den Servicemitarbeiter?
 # 6. Warum kann der Kunde die Karte ausgeben?
+
