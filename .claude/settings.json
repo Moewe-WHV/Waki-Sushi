@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m py_compile snackautomat/models/kunde.py snackautomat/services/bank.py)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -m py_compile /Users/tim/Documents/Waki-Sushi/snackautomat/models/kunde.py /Users/tim/Documents/Waki-Sushi/snackautomat/services/bank.py)"
+    ]
+  }
+}

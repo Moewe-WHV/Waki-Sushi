@@ -35,17 +35,17 @@ class Snackautomat:
         ausgabe_bar = annahme_bar - rechnung # rechnung kommt von...
 
     def produkt_ausgeben(self):                                                             # Kann man produkt_ausgeben und bestand_aktualisieren zusammenfügen?
-        if auswahl_produkt = "Cola" and self.bestand["Cola"] == 0:
+        if auswahl_produkt == "1" and self.bestand["Cola"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt = "Wasser" and self.bestand["Wasser"] == 0:
+        elif auswahl_produkt == "2" and self.bestand["Wasser"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt = "Tee" and self.bestand["Tee"] == 0:
+        elif auswahl_produkt == "3" and self.bestand["Tee"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt = "Mars" and self.bestand["Mars"] == 0:
+        elif auswahl_produkt == "4" and self.bestand["Mars"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt = "Wasabinuesse" and self.bestand["Wasabinuesse"] == 0:
+        elif auswahl_produkt == "5" and self.bestand["Wasabinuesse"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt = "Algenchips" and self.bestand["Algenchips"] == 0:
+        elif auswahl_produkt == "6" and self.bestand["Algenchips"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
         else:
             print(f"{auswahl_produkt} wird ausgegeben!")
