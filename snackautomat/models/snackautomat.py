@@ -5,7 +5,7 @@ class Snackautomat:
         self.wechselgeldbestand = 40
         self.wechselgeld_kapazitaet = 200
         self.wechselgeld_leerungsgrenze = 0.8 # 0.8 steht für was ??? wir nehmen an, dass 20% der Kapazität im Automaten bleiben soll
-
+                                                # 0.8 sind 80% der Kapazität
     def bestand_anzeigen(self):
         for key, value in self.bestand.items():
             print(f"{key} : {value}")
@@ -18,7 +18,7 @@ class Snackautomat:
         print("Karte wird eingelesen...")
 
     def karte_pruefen(self):
-        # Überprüfung von Kontostand > Rechnung oder ist Karte eine Bankkarte ???
+        # Überprüfung von Kontostand > Rechnung oder ist Karte eine Bankkarte ??? // entscheiden uns für Prüfung ob Bankkarte
         print("Karte wird geprüft...")
 
     def karte_ausgeben(self):
@@ -29,39 +29,39 @@ class Snackautomat:
         pass
 
     def bargeld_annehmen(self):
-        annahme_bar = int(input("Wieviel Bargeld wird eingezahlt? ")) # float wäre besser statt int
+        annahme_bar = float(input("Wieviel Bargeld wird eingezahlt? ")) # float wäre besser statt int // entscheiden uns für float
 
     def bargerld_ausgeben(self):
         ausgabe_bar = annahme_bar - rechnung # rechnung kommt von...
 
     def produkt_ausgeben(self, auswahl_produkt):                                                             # Kann man produkt_ausgeben und bestand_aktualisieren zusammenfügen?
         if auswahl_produkt == "1" and self.bestand["Cola"] == 0:
-            print(f"{auswahl_produkt} ist derzeit ausverkauft!")
+            print("Cola ist derzeit ausverkauft!")
         elif auswahl_produkt == "2" and self.bestand["Wasser"] == 0:
-            print(f"{auswahl_produkt} ist derzeit ausverkauft!")
+            print("Wasser ist derzeit ausverkauft!")
         elif auswahl_produkt == "3" and self.bestand["Tee"] == 0:
-            print(f"{auswahl_produkt} ist derzeit ausverkauft!")
+            print("Tee ist derzeit ausverkauft!")
         elif auswahl_produkt == "6" and self.bestand["Mars"] == 0:
-            print(f"{auswahl_produkt} ist derzeit ausverkauft!")
+            print("Mars ist derzeit ausverkauft!")
         elif auswahl_produkt == "5" and self.bestand["Wasabinuesse"] == 0:
-            print(f"{auswahl_produkt} ist derzeit ausverkauft!")
+            print("Wasabinüsse sind derzeit ausverkauft!")
         elif auswahl_produkt == "4" and self.bestand["Algenchips"] == 0:
-            print(f"{auswahl_produkt} ist derzeit ausverkauft!")
+            print("Algenchips sind derzeit ausverkauft!")
         else:
-            print(f"{auswahl_produkt} wird ausgegeben!")
+            print("Das gewählte Produkt wird ausgegeben!")
 
     def bestand_aktualisieren(self, auswahl_produkt):
-        if auswahl_produkt == "Cola":
+        if auswahl_produkt == "1":
             self.bestand["Cola"] = self.bestand["Cola"] - 1
-        elif auswahl_produkt == "Wasser":
+        elif auswahl_produkt == "2":
             self.bestand["Wasser"] = self.bestand["Wasser"] - 1
-        elif auswahl_produkt == "Tee":
+        elif auswahl_produkt == "3":
             self.bestand["Tee"] = self.bestand["Tee"] - 1
-        elif auswahl_produkt == "Mars":
+        elif auswahl_produkt == "6":
             self.bestand["Mars"] = self.bestand["Mars"] - 1
-        elif auswahl_produkt == "Wasabinuesse":
+        elif auswahl_produkt == "5":
             self.bestand["Wasabinuesse"] = self.bestand["Wasabinuesse"] - 1
-        elif auswahl_produkt == "Algenchips":
+        elif auswahl_produkt == "4":
             self.bestand["Algenchips"] = self.bestand["Algenchips"] - 1
 
     def wechselgeldbestand_aktualisieren(self):
@@ -69,9 +69,9 @@ class Snackautomat:
 
 
 
-snackautomat1 = Snackautomat("Nummer 1")
-snackautomat1.bestand_anzeigen()
-self.bestand["Cola"]
+#snackautomat1 = Snackautomat("Nummer 1")
+#snackautomat1.bestand_anzeigen()
+#self.bestand["Cola"]
 
 
 #Fragen: 
@@ -79,3 +79,5 @@ self.bestand["Cola"]
 # 2.Wohin wird das Geld der Karte überwiesen? kein Firmenkonto verzeichnet
 # 3.Ist bei karte_pruefen im Snackautomaten der Kontostand gemeint oder ob die Karte eine Bankkarte ist?
 # 4.Warum gibt es bei Geld keinen float statt einem int?
+# 5.Warum gibt es kein Menü für den Servicemitarbeiter?
+# 6. Warum kann der Kunde die Karte ausgeben?
