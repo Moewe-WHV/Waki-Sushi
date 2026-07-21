@@ -192,3 +192,5 @@ $RECYCLE.BIN/
 # Ordner
 Gruppe 2/
 tests/
+
+__pycache__/
