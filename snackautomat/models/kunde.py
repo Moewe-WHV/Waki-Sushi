@@ -35,8 +35,7 @@ class Kunde:
             produktauswahl (str): Name des ausgewählten Produkts.
         """
         self.produktauswahl = produktauswahl
-        # TODO: sobald Snackautomat fertig ist, hier den Preis nachtragen:
-        # self.rechnungsbetrag = self.snackautomat.preis_ermitteln(produktauswahl)
+        # TODO: sobald Snackautomat fertig ist, hier den Preis nachtragen
 
     def Bezahlen(self, mit_karte):
         """Führt den Bezahlvorgang aus.
