@@ -1,7 +1,7 @@
 class Snackautomat: 
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
-        self.bestand = {"Wasabinuesse" : 20, "Algenchips" : 20, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 20}
+        self.bestand = {"Wasabinuesse" : 15, "Algenchips" : 15, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 15}
         self.wechselgeldbestand = 40
         self.wechselgeld_kapazitaet = 200
         self.wechselgeld_leerungsgrenze = 0.8 # 0.8 steht für was ??? wir nehmen an, dass 20% der Kapazität im Automaten bleiben soll
@@ -35,22 +35,22 @@ class Snackautomat:
         ausgabe_bar = annahme_bar - rechnung # rechnung kommt von...
 
     def produkt_ausgeben(self):                                                             # Kann man produkt_ausgeben und bestand_aktualisieren zusammenfügen?
-        if auswahl_produkt == "1" and self.bestand["Cola"] == 0:
+        if auswahl_produkt = "Cola" and self.bestand["Cola"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
         elif auswahl_produkt == "2" and self.bestand["Wasser"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
         elif auswahl_produkt == "3" and self.bestand["Tee"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt == "4" and self.bestand["Mars"] == 0:
+        elif auswahl_produkt = "Mars" and self.bestand["Mars"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
         elif auswahl_produkt == "5" and self.bestand["Wasabinuesse"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
-        elif auswahl_produkt == "6" and self.bestand["Algenchips"] == 0:
+        elif auswahl_produkt = "Algenchips" and self.bestand["Algenchips"] == 0:
             print(f"{auswahl_produkt} ist derzeit ausverkauft!")
         else:
             print(f"{auswahl_produkt} wird ausgegeben!")
 
-    def bestand_aktualisieren(self):
+    def bestand_aktualisieren(self, auswahl_produkt):
         if auswahl_produkt == "Cola":
             self.bestand["Cola"] = self.bestand["Cola"] - 1
         elif auswahl_produkt == "Wasser":
