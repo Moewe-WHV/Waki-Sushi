@@ -1,4 +1,22 @@
+from models.snackautomat import Snackautomat
 
-
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
+print()
+print("HERZLICH WILLKOMMEN BEI DEINEM SNACKAUTOMATEN NUMMER 1")
+print("Folgendes haben wir im Angebot:")
+print()
+print("--GETRÄNKE--")
+print("1. Cola")
+print("2. Wasser")
+print("3. Tee")
+print("--------------------------------------------------------------------------")
+print("--SPEISEN--")
+print("4. Algenchips")
+print("5. Wasabinüsse")
+print("6. Mars")
+print()
+auswahl_produkt = (input("Bitte wähle die Nummer des Produkts aus: "))
+produkt = Snackautomat("Automat 1", 40, 200, 0.8)
+print()
+produkt.produkt_ausgeben(auswahl_produkt)
