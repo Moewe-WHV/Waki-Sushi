@@ -2,21 +2,23 @@ class Snackautomat:
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
         self.bestand = {"Wasabinuesse" : 20, "Algenchips" : 20, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 20}
-        self.wechselgeldbestand = wechselgeldbestand
+        self.wechselgeldbestand = 40
         self.wechselgeld_kapazitaet = 200
-        self.wechselgeld_leerungsgrenze = 0.8
+        self.wechselgeld_leerungsgrenze = 0.8 # 0.8 steht für was ??? wir nehmen an, dass 20% der Kapazität im Automaten bleiben soll
 
     def bestand_anzeigen(self):
         for key, value in self.bestand.items():
             print(f"{key} : {value}")
 
     def wechselgeldbestand_anzeigen(self):
-        pass
+        wechselgeldbestand = self.wechselgeldbestand
+        print(f"{wechselgeldbestand} EUR")
+
     def karte_einlesen(self):
         print("Karte wird eingelesen...")
 
     def karte_pruefen(self):
-        # Überprüfung von Kontostand > Rechnung
+        # Überprüfung von Kontostand > Rechnung oder ist Karte eine Bankkarte ???
         print("Karte wird geprüft...")
 
     def karte_ausgeben(self):
@@ -76,4 +78,4 @@ self.bestand["Cola"]
 # 1.Werden Bareinnahmen in Wechselgeld umgewandelt oder wird das seperat gespeichert im Automaten?  
 # 2.Wohin wird das Geld der Karte überwiesen? kein Firmenkonto verzeichnet
 # 3.Ist bei karte_pruefen im Snackautomaten der Kontostand gemeint oder ob die Karte eine Bankkarte ist?
-# 4.Wo wird abgefragt, ob Bar oder mit Karte gezahlt werden soll? Vllt in der Main ?
+# 4.Warum gibt es bei Geld keinen float statt einem int?
