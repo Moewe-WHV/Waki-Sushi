@@ -1,3 +1,5 @@
+from models.essen import Mars
+
 class Snackautomat:
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
@@ -24,9 +26,10 @@ class Snackautomat:
     def karte_ausgeben(self):
         print("Karte wird ausgegeben...")
  
-    def zahlung_abwickeln(self):
+    def zahlung_abwickeln(self, produkt):
         #Geld wird von Konto irgendwo hin transferiert bei Kartenzahlung
-        pass
+        rechnung = produkt.preis
+        print(f"Der Preis ist {rechnung}")
  
     def bargeld_annehmen(self):
         annahme_bar = float(input("Wieviel Bargeld wird eingezahlt? ")) # float wäre besser statt int // entscheiden uns für float
@@ -35,33 +38,35 @@ class Snackautomat:
         ausgabe_bar = annahme_bar - rechnung # rechnung kommt von...
  
     def produkt_ausgeben(self, auswahl_produkt):                                                             # Kann man produkt_ausgeben und bestand_aktualisieren zusammenfügen?
-        if auswahl_produkt == "1" and self.bestand["Cola"] == 0:
+        if auswahl_produkt == 1 and self.bestand["Cola"] == 0:
             print("Cola ist derzeit ausverkauft!")
-        elif auswahl_produkt == "2" and self.bestand["Wasser"] == 0:
+        elif auswahl_produkt == 2 and self.bestand["Wasser"] == 0:
             print("Wasser ist derzeit ausverkauft!")
-        elif auswahl_produkt == "3" and self.bestand["Tee"] == 0:
+        elif auswahl_produkt == 3 and self.bestand["Tee"] == 0:
             print("Tee ist derzeit ausverkauft!")
-        elif auswahl_produkt == "6" and self.bestand["Mars"] == 0:
+        elif auswahl_produkt == 6 and self.bestand["Mars"] == 0:
             print("Mars ist derzeit ausverkauft!")
-        elif auswahl_produkt == "5" and self.bestand["Wasabinuesse"] == 0:
+        elif auswahl_produkt == 5 and self.bestand["Wasabinuesse"] == 0:
             print("Wasabinüsse sind derzeit ausverkauft!")
-        elif auswahl_produkt == "4" and self.bestand["Algenchips"] == 0:
+        elif auswahl_produkt == 4 and self.bestand["Algenchips"] == 0:
             print("Algenchips sind derzeit ausverkauft!")
+        elif auswahl_produkt == 0 and auswahl_produkt >= 7:
+            print("Diese Zahl ist nicht korrekt!")
         else:
             print("Das gewählte Produkt wird ausgegeben!")
  
     def bestand_aktualisieren(self, auswahl_produkt):
-        if auswahl_produkt == "1":
+        if auswahl_produkt == 1:
             self.bestand["Cola"] = self.bestand["Cola"] - 1
-        elif auswahl_produkt == "2":
+        elif auswahl_produkt == 2:
             self.bestand["Wasser"] = self.bestand["Wasser"] - 1
-        elif auswahl_produkt == "3":
+        elif auswahl_produkt == 3:
             self.bestand["Tee"] = self.bestand["Tee"] - 1
-        elif auswahl_produkt == "6":
+        elif auswahl_produkt == 6:
             self.bestand["Mars"] = self.bestand["Mars"] - 1
-        elif auswahl_produkt == "5":
+        elif auswahl_produkt == 5:
             self.bestand["Wasabinuesse"] = self.bestand["Wasabinuesse"] - 1
-        elif auswahl_produkt == "4":
+        elif auswahl_produkt == 4:
             self.bestand["Algenchips"] = self.bestand["Algenchips"] - 1
  
     def wechselgeldbestand_aktualisieren(self):
