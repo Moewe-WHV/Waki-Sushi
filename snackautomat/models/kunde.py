@@ -46,5 +46,5 @@ class Kunde:
 kunde = Kunde(kontostand=50, bargeld=10, nutzt_karte=True)
 bank = Bank(kontostand_kunde=50, karte_gueltigkeit=True)
 
-kunde.auswahl_produkt("Wasabinuesse")
+kunde.auswahl_produkt("Mars")
 print(kunde.bezahlen(True, mars.preis, bank))

@@ -1,15 +1,17 @@
+from models.snackautomat import Snackautomat
+
 class Uni_Netzwerk:
     def __init__(self, bestand: dict, kontostand: int, anzahl_snackautomaten: int):
         self.bestand: dict = bestand
         self.kontostand: int = kontostand
         self.anzahl_snackautomaten: int = anzahl_snackautomaten
 
-    def bestandsdaten_empfangen(self, automat: str, produkte: dict):
+    def bestandsdaten_empfangen(self, automat):
+        self.bestand = automat.bestand
+
+    def wechselgeldbestand_empfangen(self, automat: str, bestand: int):
         pass
 
-    def wechselgeldbestand_empfangen(self, automat: str, bestand: int):        
-        pass
-    
-automat_1 = Uni_Netzwerk(bestand={'Cola': 20}, kontostand=100, anzahl_snackautomaten=1)
-print(automat_1.anzahl_snackautomaten)
-print(automat_1.bestand)
+snackautomat1 = Snackautomat("Automat 1", 40, 200, 0.8)
+
+print(snackautomat1.bestand)

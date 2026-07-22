@@ -194,3 +194,5 @@ Gruppe 2/
 tests/
 
 __pycache__/
+.vscode/
+.claude/
