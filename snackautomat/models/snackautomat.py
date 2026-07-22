@@ -15,6 +15,12 @@ class Snackautomat:
     def wechselgeldbestand_anzeigen(self):
         wechselgeldbestand = self.wechselgeldbestand
         print(f"{wechselgeldbestand} EUR")
+
+    def zahlung_abwickeln(self, produkt):
+    #Geld wird von Konto irgendwo hin transferiert bei Kartenzahlung
+        rechnung = produkt.preis
+        print(f"Der Preis ist {rechnung:.2f} Euro.")
+        print()
  
     def karte_einlesen(self):
         print("Karte wird eingelesen...")
@@ -26,16 +32,15 @@ class Snackautomat:
     def karte_ausgeben(self):
         print("Karte wird ausgegeben...")
  
-    def zahlung_abwickeln(self, produkt):
-        #Geld wird von Konto irgendwo hin transferiert bei Kartenzahlung
-        rechnung = produkt.preis
-        print(f"Der Preis ist {rechnung}")
- 
-    def bargeld_annehmen(self):
+    def bargeld_annehmen_und_ausgeben(self, produkt):
         annahme_bar = float(input("Wieviel Bargeld wird eingezahlt? ")) # float wäre besser statt int // entscheiden uns für float
+        ausgabe_bar = annahme_bar - produkt.preis
+        print(f"Es gibt {ausgabe_bar} Euro zurück.")
 
-    def bargerld_ausgeben(self):
-        ausgabe_bar = annahme_bar - rechnung # rechnung kommt von...
+    
+                
+    def wechselgeldbestand_aktualisieren(self):
+            pass
  
     def produkt_ausgeben(self, auswahl_produkt):                                                             # Kann man produkt_ausgeben und bestand_aktualisieren zusammenfügen?
         if auswahl_produkt == 1 and self.bestand["Cola"] == 0:
@@ -69,8 +74,7 @@ class Snackautomat:
         elif auswahl_produkt == 4:
             self.bestand["Algenchips"] = self.bestand["Algenchips"] - 1
  
-    def wechselgeldbestand_aktualisieren(self):
-        pass
+    
 
 
 #snackautomat1 = Snackautomat("Nummer 1")
