@@ -1,4 +1,8 @@
+import json
+
 from models.essen import Mars
+
+DATEINAME = "data/zustand.json" # Datei, in der Bestand und Bargeldbetrag gespeichert werden
 
 class Snackautomat:
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
@@ -8,6 +12,27 @@ class Snackautomat:
         self.wechselgeld_kapazitaet = 200
         self.wechselgeld_leerungsgrenze = 0.8 # 0.8 steht für was ??? wir nehmen an, dass 20% der Kapazität im Automaten bleiben soll
                                                 # 0.8 sind 80% der Kapazität
+        self.zustand_laden() # Falls schon einmal gespeichert wurde, überschreibt das die Werte von oben
+
+    def zustand_speichern(self):
+        """Speichert den Bestand und den Bargeldbetrag in einer JSON-Datei."""
+        daten = {
+            "bestand": self.bestand,
+            "wechselgeldbestand": self.wechselgeldbestand
+        }
+        with open(DATEINAME, "w") as datei:
+            json.dump(daten, datei, indent=4)
+
+    def zustand_laden(self):
+        """Lädt den Bestand und den Bargeldbetrag aus der JSON-Datei, falls vorhanden."""
+        try:
+            with open(DATEINAME, "r") as datei:
+                daten = json.load(datei)
+            self.bestand = daten["bestand"]
+            self.wechselgeldbestand = daten["wechselgeldbestand"]
+        except FileNotFoundError:
+            pass
+    
     def bestand_anzeigen(self):
         for key, value in self.bestand.items():
             print(f"{key} : {value}")
@@ -36,6 +61,8 @@ class Snackautomat:
         annahme_bar = float(input("Wieviel Bargeld wird eingezahlt? ")) # float wäre besser statt int // entscheiden uns für float
         ausgabe_bar = annahme_bar - produkt.preis
         print(f"Es gibt {ausgabe_bar} Euro zurück.")
+        self.wechselgeldbestand = self.wechselgeldbestand + produkt.preis
+        self.zustand_speichern()
 
     
                 
@@ -73,8 +100,9 @@ class Snackautomat:
             self.bestand["Wasabinuesse"] = self.bestand["Wasabinuesse"] - 1
         elif auswahl_produkt == 4:
             self.bestand["Algenchips"] = self.bestand["Algenchips"] - 1
- 
-    
+        self.zustand_speichern()
+
+
 
 
 #snackautomat1 = Snackautomat("Nummer 1")

@@ -1,6 +1,8 @@
 """Schnittstelle zum Uni-Netzwerk für Automatenbestände und Zahlungen."""
 
-from models.snackautomat import Snackautomat
+import json
+
+from models.snackautomat import Snackautomat, DATEINAME
 
 
 class Uni_Netzwerk:
@@ -25,6 +27,12 @@ class Uni_Netzwerk:
             automat: Der Snackautomat, dessen Bestand übertragen wird.
         """
         self.bestand = automat.bestand
+
+    def bestand_aus_datei_laden(self):
+        """Liest den Bestand direkt aus der gespeicherten JSON-Datei des Automaten."""
+        with open(DATEINAME, "r") as datei:
+            daten = json.load(datei)
+        self.bestand = daten["bestand"]
 
     def wechselgeldbestand_empfangen(self, automat: str, bestand: int):
         """Empfängt den Wechselgeldbestand eines Automaten.
