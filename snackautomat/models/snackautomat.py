@@ -4,7 +4,7 @@ class Snackautomat:
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
         self.bestand = {"Wasabinuesse" : 15, "Algenchips" : 15, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 15}
-        self.wechselgeldbestand = 40
+        self.wechselgeldbestand = 40 # Es wurde nicht angegeben, bis wohin ein Wechselgeldbestand ausgeleert wird. Wir haben uns selbst für 20% der max Kapazität entschieden
         self.wechselgeld_kapazitaet = 200
         self.wechselgeld_leerungsgrenze = 0.8 # 0.8 steht für was ??? wir nehmen an, dass 20% der Kapazität im Automaten bleiben soll
                                                 # 0.8 sind 80% der Kapazität
@@ -49,14 +49,14 @@ class Snackautomat:
             print("Wasser ist derzeit ausverkauft!")
         elif auswahl_produkt == 3 and self.bestand["Tee"] == 0:
             print("Tee ist derzeit ausverkauft!")
-        elif auswahl_produkt == 6 and self.bestand["Mars"] == 0:
-            print("Mars ist derzeit ausverkauft!")
+        elif auswahl_produkt == 4 and self.bestand["Algenchips"] == 0:
+                    print("Algenchips sind derzeit ausverkauft!")
         elif auswahl_produkt == 5 and self.bestand["Wasabinuesse"] == 0:
             print("Wasabinüsse sind derzeit ausverkauft!")
-        elif auswahl_produkt == 4 and self.bestand["Algenchips"] == 0:
-            print("Algenchips sind derzeit ausverkauft!")
+        elif auswahl_produkt == 6 and self.bestand["Mars"] == 0:
+                    print("Mars ist derzeit ausverkauft!")
         elif auswahl_produkt == 0 and auswahl_produkt >= 7:
-            print("Diese Zahl ist nicht korrekt!")
+            print("Diese Zahl enthält kein Produkt!")
         else:
             print("Das gewählte Produkt wird ausgegeben!")
  
