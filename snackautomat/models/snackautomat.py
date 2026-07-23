@@ -8,7 +8,7 @@ class Snackautomat:
     def __init__(self, name, wechselgeldbestand, wechselgeld_kapazitaet, wechselgeld_leerungsgrenze):
         self.name = name
         self.bestand = {"Wasabinuesse" : 15, "Algenchips" : 15, "Mars" : 20, "Wasser" : 20, "Cola" : 20, "Tee" : 15}
-        self.wechselgeldbestand = 40 # Es wurde nicht angegeben, bis wohin ein Wechselgeldbestand ausgeleert wird. Wir haben uns selbst für 20% der max Kapazität entschieden
+        self.wechselgeldbestand = 60 # Es wurde nicht angegeben, bis wohin ein Wechselgeldbestand ausgeleert wird. Wir haben uns selbst für 20% der max Kapazität entschieden
         self.wechselgeld_kapazitaet = 200
         self.wechselgeld_leerungsgrenze = 0.8 # 0.8 steht für was ??? wir nehmen an, dass 20% der Kapazität im Automaten bleiben soll
                                                 # 0.8 sind 80% der Kapazität
@@ -39,7 +39,7 @@ class Snackautomat:
  
     def wechselgeldbestand_anzeigen(self):
         wechselgeldbestand = self.wechselgeldbestand
-        print(f"{wechselgeldbestand} EUR")
+        print(f"{wechselgeldbestand:.2f} EUR")
 
     def zahlung_abwickeln(self, produkt):
     #Geld wird von Konto irgendwo hin transferiert bei Kartenzahlung

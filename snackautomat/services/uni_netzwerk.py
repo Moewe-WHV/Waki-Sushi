@@ -1,10 +1,7 @@
 """Schnittstelle zum Uni-Netzwerk für Automatenbestände und Zahlungen."""
 
 import json
-
 from models.snackautomat import Snackautomat, DATEINAME
-
-
 class Uni_Netzwerk:
     """Stellt die Verbindung zum Hochschulnetzwerk für Snackautomaten bereit."""
 
@@ -33,6 +30,7 @@ class Uni_Netzwerk:
         with open(DATEINAME, "r") as datei:
             daten = json.load(datei)
         self.bestand = daten["bestand"]
+        self.wechselgeldbestand = daten["wechselgeldbestand"]
 
     def wechselgeldbestand_empfangen(self, automat: str, bestand: int):
         """Empfängt den Wechselgeldbestand eines Automaten.
@@ -42,8 +40,13 @@ class Uni_Netzwerk:
             bestand (int): Wechselgeldbestand des Automaten.
         """
         pass
+    
+    def wechselgeldbestand_anzeigen(self, wechgselgeldbestand):
+        wechselgeldbestand = self.wechselgeldbestand
+        print(f"{wechselgeldbestand:.2f} EUR")
 
 
 snackautomat1 = Snackautomat("Automat 1", 40, 200, 0.8)
 
 print(snackautomat1.bestand)
+print(snackautomat1.wechselgeldbestand)
