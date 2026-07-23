@@ -15,5 +15,3 @@ class Uni_Netzwerk:
 snackautomat1 = Snackautomat("Automat 1", 40, 200, 0.8)
 
 print(snackautomat1.bestand)
-
-#...
