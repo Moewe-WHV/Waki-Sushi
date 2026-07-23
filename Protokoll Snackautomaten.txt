@@ -5,6 +5,7 @@ Protokoll von Projekt
 
 
 17.07.2026
+Freitag
 Tag 1
 
 Das Projekt wurde uns als Team übergeben. 
@@ -19,6 +20,7 @@ ENDE von Tag 1.
 
 
 20.07.2026
+Montag
 Tag 2
 
 Die Besprechung des Vorganges wurde erfolgreich gestartet.
@@ -33,6 +35,7 @@ ENDE von Tag 2.
 
 
 21.07.2026
+Dienstag
 Tag 3
 
 Nach der ersten Unterrichtseinheit des Tages wurden die noch offenen Fragen besprochen.
@@ -46,6 +49,7 @@ Ende von Tag 3.
 
 
 22.07.2026
+Mittwoch
 Tag 4
 
 Nach einem Logikfehler am frühen Morgen musste das Thema "Git" und "GitHub" nochmal neu erklärt werden mit entgültigem erfolgreichen Verständnis hinterher.
@@ -60,5 +64,6 @@ Ende von Tag 4.
 
 
 23.07.2026
+Donnerstag
 Tag 5 (letzter Tag der Bearbeitung)
 
