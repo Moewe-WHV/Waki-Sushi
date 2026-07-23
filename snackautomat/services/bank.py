@@ -1,5 +1,6 @@
 """Bankdienst für die Zahlungsprüfung im Snackautomaten."""
 
+
 class Bank:
     """Simuliert eine Bankverbindung für die Kartenzahlung.
 
