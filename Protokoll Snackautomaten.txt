@@ -48,5 +48,17 @@ Ende von Tag 3.
 22.07.2026
 Tag 4
 
+Nach einem Logikfehler am frühen Morgen musste das Thema "Git" und "GitHub" nochmal neu erklärt werden mit entgültigem erfolgreichen Verständnis hinterher.
+Dies hatte sowohl Zeit gekostet und hat auch einiges an Fortschritt zurück geworfen. Dennoch wurde schnell nachgearbeitet und nach mehreren Absprachen wurde das Problem gelöst,
+die Produkte und ihre Werte in die Main zu implementieren.
+Am Ende ist die Aufrufung des jeweiligen Preises und die 2 Möglichkeiten der Bezahlung fertiggestellt worden.
+Aktuell stehen sowohl noch die Aufrufung als auch Aktualisierung des Wechselgeldbestandes aus, welche morgen, am letzten Tag, fertig gestellt werden sollten.
+Die Benutzung aller anderen fertig gestellten Klassen ist vom Zeitaufwand leider nicht mehr möglich, laut eigener Einschätzung im Team.
+Eine Präsentation ist am Ende noch vorbereitet worden.
 
+Ende von Tag 4.
+
+
+23.07.2026
+Tag 5 (letzter Tag der Bearbeitung)
 
