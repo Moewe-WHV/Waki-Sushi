@@ -37,9 +37,38 @@ def main():
     # Ab hier beginnt die Auswahl----------------------------------------------------------------------------
     auswahl_produkt = int(input("Bitte wähle die Nummer des Produkts aus: "))
     if auswahl_produkt == 2:
+        print()
         mit_co2 = input("Mit oder ohne Kohlensäure?(j/n) ")
     if auswahl_produkt == 3:
+        print()
         print(input("Soll der Tee heiß oder kalt sein?(h/k) "))
+# 
+    #if auswahl_produkt == "0":
+        #print()
+        #print("WILLKOMMEN IM SERVICE-MENUE")
+        #print("Folgende Funktionen stehen zur Verfügung:")
+        #print()
+        #print("1. Bestand der Produkte anzeigen")
+        #print("2. Bestand der Produkte auffüllen")
+        #print("3. Wechselgeldbestand anzeigen")
+        #print("4. Wechselgeldbestand leeren")
+        #print()
+        #aktion = input("Wählen Sie die Nummer der Funktion: ")
+        #if aktion == "1":
+        #    automat1.bestand_anzeigen()
+        #    back_to_menu = input("Zurück ins Hauptmenue?(j) ")
+        #    if back_to_menu == "j":
+        #         main()
+        #elif aktion == "2":
+        #    pass
+        #elif aktion == "3":
+        #     automat1.wechselgeldbestand_anzeigen()
+        #     print()
+        #     back_to_menu = input("Zurück ins Hauptmenue?(j) ")
+        #     if back_to_menu == "j": # Wird nicht j eingegeben, dann müsste back_to_menu erst in eine Funktion gepackt werden, welche dann immer erneut aufgerufen wird, wenn die Eingabe falsch ist
+        #          main()
+        #elif aktion == "4":
+        #     pass
     print()
 # Ab hier beginnt die Bezahlung-----------------------------------------------------------------------
     if auswahl_produkt == 1:
@@ -142,7 +171,7 @@ def main():
     automat1.produkt_ausgeben(auswahl_produkt)
     automat1.bestand_aktualisieren(auswahl_produkt)
     print()
-    #automat1.bestand_anzeigen()
+    #
     antwort = input("Ein weiteres Produkt?(y/n): ")
     if antwort == "y":
         main()    

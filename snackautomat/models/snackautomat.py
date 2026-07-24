@@ -82,7 +82,7 @@ class Snackautomat:
             print("Wasabinüsse sind derzeit ausverkauft!")
         elif auswahl_produkt == 6 and self.bestand["Mars"] == 0:
                     print("Mars ist derzeit ausverkauft!")
-        elif auswahl_produkt == 0 and auswahl_produkt >= 7:
+        elif auswahl_produkt >= 7:
             print("Diese Zahl enthält kein Produkt!")
         else:
             print("Das gewählte Produkt wird ausgegeben!")
