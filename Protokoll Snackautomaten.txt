@@ -67,3 +67,5 @@ Ende von Tag 4.
 Donnerstag
 Tag 5 (letzter Tag der Bearbeitung)
 
+Wir haben versucht eine JSON-Datei für die Bestände zu implementieren. Diese Funktionierte zum Teil. Die Zeit für die Fehlerfindung, damit es komplett funktioniert hatten wir nicht mehr.
+
